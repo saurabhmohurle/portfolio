@@ -1,85 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saurabh Mohurle | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  <script>
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+    window.onload = () => {
+      gsap.from(".fade-in", { duration: 1.5, opacity: 0, y: 30, stagger: 0.3 });
+    };
+  </script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition duration-500">
 
   <!-- Header -->
-  <header class="bg-white shadow p-6 sticky top-0 z-10">
+  <header class="bg-white dark:bg-gray-800 shadow p-4 sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Saurabh Mohurle</h1>
-      <nav>
-        <a href="#about" class="ml-4 hover:text-blue-600">About</a>
-        <a href="#projects" class="ml-4 hover:text-blue-600">Projects</a>
-        <a href="#contact" class="ml-4 hover:text-blue-600">Contact</a>
+      <h1 class="text-2xl font-bold">Saurabh Mohurle</h1>
+      <nav class="space-x-4">
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#projects" class="hover:text-blue-500">Projects</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+        <button onclick="toggleDarkMode()" class="ml-4 px-2 py-1 border rounded">🌓</button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="bg-blue-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-2">Hi, I'm Saurabh</h2>
-    <p class="text-xl text-gray-700">Java Backend Developer | Microservices & REST API Specialist</p>
+  <!-- Hero with image background -->
+  <section class="relative text-center py-32 hero-bg text-white dark:text-white">
+    <div class="bg-black bg-opacity-60 absolute inset-0 z-0"></div>
+    <div class="relative z-10 fade-in">
+      <h2 class="text-5xl font-extrabold mb-4">Hi, I'm Saurabh</h2>
+      <p class="text-xl">Java Developer | REST API & Microservices | Cloud Enthusiast</p>
+      <a href="resume.pdf" download class="inline-block mt-6 px-6 py-3 bg-blue-600 text-white rounded shadow-lg hover:bg-blue-700 transition">Download Resume</a>
+    </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-16 px-6 bg-white">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold mb-4">About Me</h2>
-      <p class="text-gray-700">
-        I'm a Full Stack Java Developer with hands-on experience building scalable RESTful services and microservices. I specialize in Java, Spring Boot, and relational databases like PostgreSQL and MS-SQL. My background includes working on real-world enterprise software during my internship and participating in open-source development. I'm passionate about building efficient backends and delivering value through clean, maintainable code.
-      </p>
+  <section id="about" class="py-20 px-6 bg-white dark:bg-gray-900 fade-in">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-700 dark:text-gray-300">I'm a Full Stack Java Developer with expertise in REST APIs, microservices, and database optimization. I enjoy solving complex problems and turning ideas into scalable software.</p>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-16 px-6 bg-gray-50">
+  <section id="projects" class="py-20 px-6 bg-gray-100 dark:bg-gray-800 fade-in">
     <div class="max-w-5xl mx-auto">
-      <h2 class="text-2xl font-bold mb-8 text-center">Projects</h2>
-      <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-        
-        <!-- Project 1 -->
-        <div class="bg-white p-4 shadow rounded">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+      <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-all">
           <h3 class="text-xl font-semibold">Online Inward-Outward System</h3>
-          <p class="text-gray-600 mt-2">
-            A live enterprise-grade application for managing public relation workflows and document tracking. Built with ASP.NET, C#, HTML, CSS, and MS-SQL to automate record keeping and reduce processing time.
-          </p>
-          <a href="https://github.com/saurabhmohurle" class="text-blue-600 mt-2 inline-block">View on GitHub</a>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">Document tracking system built with ASP.NET, C#, and MS-SQL. Reduced paper processing by 35%.</p>
+          <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
         </div>
 
-        <!-- Project 2 -->
-        <div class="bg-white p-4 shadow rounded">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transform hover:scale-105 transition-all">
           <h3 class="text-xl font-semibold">Student Management System</h3>
-          <p class="text-gray-600 mt-2">
-            A backend-driven system to manage student data, supporting CRUD operations and real-time updates for administrators. Developed using Core Java, Spring Boot, Oracle 10g, and REST APIs.
-          </p>
-          <a href="https://github.com/saurabhmohurle" class="text-blue-600 mt-2 inline-block">View on GitHub</a>
+          <p class="text-gray-600 dark:text-gray-300 mt-2">REST API-driven backend using Spring Boot and Oracle for real-time student data management.</p>
+          <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
         </div>
 
-        <!-- Add more projects as you build them -->
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-16 px-6 bg-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Contact</h2>
-      <p class="text-gray-700 mb-6">Let's collaborate or talk about opportunities!</p>
-      <p>Email: <a href="mailto:saurabhmohurle786@gmail.com" class="text-blue-600">saurabhmohurle786@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/saurabh-mohurle" class="text-blue-600">linkedin.com/in/saurabh-mohurle</a></p>
-      <p>GitHub: <a href="https://github.com/saurabhmohurle" class="text-blue-600">github.com/saurabhmohurle</a></p>
-      <p>Location: Chandrapur, Maharashtra, India</p>
+  <!-- Image Gallery Section -->
+  <section class="py-20 px-6 bg-white dark:bg-gray-900 fade-in">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Project Snapshots</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <img src="https://via.placeholder.com/600x400?text=Project+1" alt="Project 1" class="w-full h-auto object-cover transition-opacity duration-700 opacity-0" onload="this.style.opacity='1'">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <img src="https://via.placeholder.com/600x400?text=Project+2" alt="Project 2" class="w-full h-auto object-cover transition-opacity duration-700 opacity-0" onload="this.style.opacity='1'">
+        </div>
+        <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+          <img src="https://via.placeholder.com/600x400?text=Project+3" alt="Project 3" class="w-full h-auto object-cover transition-opacity duration-700 opacity-0" onload="this.style.opacity='1'">
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer class="bg-gray-200 py-4 text-center">
-    <p class="text-gray-600">&copy; 2025 Saurabh Mohurle. All rights reserved.</p>
-  </footer>
+<!-- Contact -->
+<section id="contact" class="py-20 px-6 bg-white dark:bg-gray-900 fade-in">
+  <!-- ... your existing contact section ... -->
+</section>
 
-</body>
-</html>
+<!-- Footer -->
+<footer class="bg-gray-200 dark:bg-gray-800 py-4 text-center">
+  <p class="text-gray-600 dark:text-gray-300">&copy; 2025 Saurabh Mohurle. Built with ❤️ and Tailwind CSS.</p>
+</footer>
+
+<script>
+  lucide.createIcons();
+</script>
