@@ -1,189 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saurabh Mohurle Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Devicon for skill logos -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-  <!-- Font Awesome for social & tools icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <!-- Google Font (Modern clean font) -->
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Mohurle - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-  <div class="background-hero">
-    <nav class="navbar">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
 
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
     <div class="hero-content">
-      <div class="hero-image">
-        <img src="images/hero.jpg" alt="Saurabh Mohurle" />
-      </div>
-      <div class="hero-text">
-        <h1>Saurabh Mohurle</h1>
-        <p>Full Stack Java Developer</p>
-        <a href="#contact" class="collab-button">Let's Collaborate</a>
-      </div>
+      <img src="images/hero.jpg" alt="Saurabh Mohurle" class="hero-img">
+      <h1>Saurabh Mohurle</h1>
+      <p>Full Stack Developer | Java, Spring Boot, REST APIs</p>
+      <a href="#contact" class="cta-btn">Let's Collaborate</a>
     </div>
-  </div>
+  </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p>
-      I’m a passionate Full Stack Java Developer with a strong foundation in Java, Spring Boot, REST APIs, and database management.
-      With internship and real-world project experience, I love building applications that make processes efficient and user-friendly.
-      I'm always open to exciting collaborations!
-    </p>
+    <p>I am a passionate full-stack developer with experience in various technologies. I love building applications that solve real-world problems and improve user experiences. I strive to continuously enhance my skills and contribute to open-source projects.</p>
+    <a href="#contact" class="cta-btn">Let's Collaborate</a>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" class="section">
     <h2>Projects</h2>
-
-    <div class="project-wrapper">
-      <div class="project-container" id="project1-container">
-        <div class="project-card"><img src="images/oios1.jpg" alt="OIOS" /></div>
-        <div class="project-card"><img src="images/oios2.jpg" alt="OIOS" /></div>
-        <div class="project-card"><img src="images/oios3.jpg" alt="OIOS" /></div>
-      </div>
-      <div class="project-info">
-        <h3>Online Inward-Outward System</h3>
-        <p>Document tracking system to streamline processing in public relations. Built using ASP.NET, C#, SQL.</p>
-        <a href="https://github.com/saurabhmohurle/oios" class="github-button" target="_blank">View on GitHub</a>
-        <div class="slider-buttons">
-          <button class="prev" data-target="project1-container">&#9664;</button>
-          <button class="next" data-target="project1-container">&#9654;</button>
+    <div class="project-slider">
+      <div class="project-container">
+        <img src="images/oios1.jpg" alt="Project 1">
+        <div class="project-info">
+          <h3>Online Inward-Outward System</h3>
+          <p>This project allows tracking and managing inward and outward documents efficiently.</p>
+          <a href="https://github.com/saurabhmohurle/oios" target="_blank" class="github-link">View on GitHub</a>
         </div>
       </div>
-    </div>
-
-    <div class="project-wrapper">
-      <div class="project-container" id="project2-container">
-        <div class="project-card"><img src="images/sms1.jpg" alt="SMS" /></div>
-        <div class="project-card"><img src="images/sms2.jpg" alt="SMS" /></div>
-        <div class="project-card"><img src="images/sms3.jpg" alt="SMS" /></div>
-      </div>
-      <div class="project-info">
-        <h3>Student Management System</h3>
-        <p>Efficient system for student data management using Core Java, Oracle 10g, Spring Boot, and REST APIs.</p>
-        <a href="https://github.com/saurabhmohurle/sms" class="github-button" target="_blank">View on GitHub</a>
-        <div class="slider-buttons">
-          <button class="prev" data-target="project2-container">&#9664;</button>
-          <button class="next" data-target="project2-container">&#9654;</button>
+      <div class="project-container">
+        <img src="images/sms1.jpg" alt="Project 2">
+        <div class="project-info">
+          <h3>Student Management System</h3>
+          <p>A complete solution for managing student records and their academic details.</p>
+          <a href="https://github.com/saurabhmohurle/sms" target="_blank" class="github-link">View on GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills -->
+  <!-- Skills Section -->
   <section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="skills-group">
-      <div class="skill-category">
+    <div class="skills-container">
+      <div class="skills-category">
         <h3>Languages</h3>
-        <ul>
-          <li><i class="devicon-java-plain colored"></i> Java</li>
-          <li><i class="devicon-javascript-plain colored"></i> JavaScript</li>
-          <li><i class="devicon-python-plain colored"></i> Python</li>
-          <li><i class="devicon-cplusplus-plain colored"></i> C/C++</li>
-          <li><i class="devicon-sqlite-plain colored"></i> SQL</li>
-        </ul>
+        <div class="skills">
+          <i class="fab fa-java"></i>
+          <i class="fab fa-js-square"></i>
+          <i class="fab fa-python"></i>
+        </div>
       </div>
-      <div class="skill-category">
+      <div class="skills-category">
         <h3>Frameworks</h3>
-        <ul>
-          <li><i class="devicon-spring-plain colored"></i> Spring Boot</li>
-          <li><i class="devicon-spring-plain colored"></i> Spring MVC</li>
-          <li><i class="fa fa-cogs"></i> JPA</li>
-        </ul>
+        <div class="skills">
+          <i class="fab fa-java"></i>
+          <i class="fab fa-spring"></i>
+          <i class="fab fa-angular"></i>
+        </div>
       </div>
-      <div class="skill-category">
+      <div class="skills-category">
         <h3>Tools</h3>
-        <ul>
-          <li><i class="devicon-git-plain colored"></i> Git</li>
-          <li><i class="devicon-github-original colored"></i> GitHub</li>
-          <li><i class="devicon-maven-plain colored"></i> Maven</li>
-          <li><i class="devicon-postgresql-plain colored"></i> PostgreSQL</li>
-          <li><i class="devicon-docker-plain colored"></i> Docker</li>
-          <li><i class="devicon-kubernetes-plain colored"></i> Kubernetes</li>
-        </ul>
+        <div class="skills">
+          <i class="fab fa-github"></i>
+          <i class="fab fa-docker"></i>
+          <i class="fab fa-aws"></i>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
+  <!-- Education Section -->
   <section id="education" class="section">
     <h2>Education</h2>
     <div class="education-container">
-      <div class="edu-card">
-        <h3>MCA - SGBAU (2021–2023)</h3>
-        <p>Sant Gadge Baba Amravati University, CGPA: 8.38</p>
+      <div class="education-item">
+        <h3>MCA - SGBAU</h3>
+        <p>2021 - 2023 | CGPA: 8.38</p>
       </div>
-      <div class="edu-card">
-        <h3>BCCA - SPM College (2018–2021)</h3>
-        <p>Sardar Patel College, CGPA: 7.5</p>
+      <div class="education-item">
+        <h3>BCCA - SPM</h3>
+        <p>2018 - 2021 | CGPA: 7.5</p>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- Experience Section -->
   <section id="experience" class="section">
     <h2>Experience</h2>
-    <div class="experience-card">
-      <h3>Full Stack Java Developer Intern – Ctronics InfoTech</h3>
-      <p>Feb 2023 - July 2023</p>
-      <ul>
-        <li>Developed web app using Java, Spring Boot, and PostgreSQL</li>
-        <li>Improved performance and implemented OOP principles</li>
-      </ul>
-    </div>
-    <div class="experience-card">
-      <h3>Programmer Trainee – Cognizant</h3>
-      <p>June 2022 - Aug 2022</p>
-      <ul>
-        <li>Completed intensive training on Java & Agile</li>
-        <li>Collaborated on real-world code reviews</li>
-      </ul>
+    <div class="experience-container">
+      <div class="experience-item">
+        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
+        <p>Feb 2023 - Jul 2023</p>
+        <p>Worked on building scalable web applications using Java, Spring Boot, and PostgreSQL.</p>
+      </div>
+      <div class="experience-item">
+        <h3>Programmer Trainee - Cognizant</h3>
+        <p>Jun 2022 - Aug 2022</p>
+        <p>Contributed to developing enterprise applications and worked with various Java technologies.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact-section">
-    <div class="contact-text">
-      <h2>Get in Touch</h2>
-      <p>Interested in working together or have a question? Let’s connect!</p>
-    </div>
-    <form action="https://formspree.io/f/xgvkavjp" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xgvkavjp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="cta-btn">Send Message</button>
     </form>
   </section>
 
   <!-- Social Links -->
-  <section class="socials">
-    <div class="social-links">
-      <a href="https://linkedin.com/in/saurabh-mohurle" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/saurabhmohurle" class="social-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://instagram.com/saurabh_mohurle_" class="social-btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-    </div>
-  </section>
+  <div class="social-links">
+    <a href="https://linkedin.com/in/saurabh-mohurle/" target="_blank" class="social-btn">LinkedIn</a>
+    <a href="https://github.com/saurabhmohurle" target="_blank" class="social-btn">GitHub</a>
+    <a href="https://instagram.com/saurabh_mohurle_" target="_blank" class="social-btn">Instagram</a>
+  </div>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
