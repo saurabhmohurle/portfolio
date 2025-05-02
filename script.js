@@ -1,13 +1,16 @@
-// Your JavaScript code for animations or interactions (if needed)
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.project-img');
+  const centerImg = document.querySelector('.project-img.center');
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Example: Add smooth scrolling effect to the navbar links
-  const navbarLinks = document.querySelectorAll('.navbar a');
-  navbarLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = e.target.getAttribute('href').substring(1);
-      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-    });
+  images.forEach(img => {
+      img.addEventListener('mouseover', () => {
+          img.style.transform = 'scale(1.2)';
+      });
+
+      img.addEventListener('mouseout', () => {
+          img.style.transform = 'scale(1)';
+      });
   });
+
+  // Add sliding functionality and arrow buttons
 });
