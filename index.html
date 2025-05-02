@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saurabh Mohurle | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-  <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Saurabh Mohurle</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#technologies">Technologies</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <div class="navbar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#technologies">Technologies</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <header>
+    <div class="intro">
+      <img src="images/hero.jpg" alt="Saurabh Mohurle" class="profile-pic" />
+      <div class="intro-text">
+        <h1>Saurabh Mohurle</h1>
+        <p>Full Stack Java Developer | Open Source Contributor | Tech Enthusiast</p>
+        <a href="#contact" class="collab-btn">Let's Collaborate</a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h2 class="hero-title">Hi, I'm Saurabh</h2>
-      <p class="hero-subtitle">Full Stack Java Developer | API Specialist | Cloud Enthusiast</p>
-      <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
-    </div>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Full Stack Java Developer with hands-on experience in building dynamic, high-performance web applications.
+      With a solid background in Core Java, Spring Boot, REST APIs, and front-end technologies, I bring efficiency and creativity to every project.
+      I enjoy working in collaborative environments, participating in hackathons, and contributing to open-source.
+    </p>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a passionate Java developer with hands-on experience in backend systems, REST APIs, and scalable applications. I love building clean, reliable, and efficient software solutions using modern technologies like Spring Boot, Docker, and PostgreSQL.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section colored">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>Online Inward-Outward System</h3>
-        <p>Document tracking system using ASP.NET, C#, MS-SQL. Reduced processing time by 35%.</p>
-        <div class="project-gallery">
-          <img src="images/oios1.jpg" alt="Project Image">
-          <img src="images/oios2.jpg" alt="Project Image">
-          <img src="images/oios3.jpg" alt="Project Image">
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-carousel">
+      <div class="project-slide">
+        <img src="images/oios1.jpg" alt="Online Inward-Outward System" />
+        <div class="project-info">
+          <h3>Online Inward-Outward System</h3>
+          <p>
+            A document tracking software built for PR management. Features include tracking, accuracy, and improved processing time.
+          </p>
+          <a href="https://github.com/saurabhmohurle/oios" target="_blank" class="repo-btn">GitHub Repo</a>
         </div>
       </div>
-
-      <div class="project">
-        <h3>Student Management System</h3>
-        <p>Student data manager built with Java, Spring Boot, Oracle. Increased data handling efficiency.</p>
-        <div class="project-gallery">
-          <img src="images/sms1.jpg" alt="Project Image">
-          <img src="images/sms2.jpg" alt="Project Image">
+      <div class="project-slide">
+        <img src="images/sms1.jpg" alt="Student Management System" />
+        <div class="project-info">
+          <h3>Student Management System</h3>
+          <p>
+            A web app to manage and analyze student records. Built using Core Java, Oracle 10g, Spring Boot, and REST APIs.
+          </p>
+          <a href="https://github.com/saurabhmohurle/sms" target="_blank" class="repo-btn">GitHub Repo</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="tags">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>REST APIs</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="section colored">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MCA</strong> - SGBAU (2021–2023) — CGPA: 8.38</li>
-        <li><strong>BCCA</strong> - SPM College (2018–2021) — CGPA: 7.5</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="job">
-        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
-        <p>Feb 2023 – Jul 2023</p>
-        <ul>
-          <li>Built responsive UIs and REST APIs using Java, Spring Boot.</li>
-          <li>Enhanced database efficiency with PostgreSQL optimization.</li>
-        </ul>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-category">
+      <h3>Languages</h3>
+      <div class="skills-grid">
+        <div class="skill">Java</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">C/C++</div>
       </div>
-      <div class="job">
-        <h3>Programmer Trainee - Cognizant</h3>
-        <p>Jun 2022 – Aug 2022</p>
-        <ul>
-          <li>Completed advanced technical training.</li>
-          <li>Collaborated in a team, participated in code reviews.</li>
-        </ul>
+      <h3>Frameworks</h3>
+      <div class="skills-grid">
+        <div class="skill">Spring Boot</div>
+        <div class="skill">Spring MVC</div>
+        <div class="skill">JPA</div>
+      </div>
+      <h3>Tools</h3>
+      <div class="skills-grid">
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Maven</div>
+        <div class="skill">Postman</div>
       </div>
     </div>
   </section>
 
-  <!-- Technologies Section -->
-  <section id="technologies" class="section colored">
-    <div class="container">
-      <h2>Technologies & Tools</h2>
-      <ul class="tags">
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>PostgreSQL</li>
-        <li>AWS</li>
-        <li>Oracle 10g</li>
-        <li>Postman</li>
-      </ul>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>MCA - SGBAU</h3>
+      <p>2021-2023 | CGPA: 8.38</p>
+    </div>
+    <div class="card">
+      <h3>BCCA - Sardar Patel College</h3>
+      <p>2018-2021 | CGPA: 7.5</p>
     </div>
   </section>
 
-  <!-- Interests Section -->
-  <section id="interests" class="section">
-    <div class="container">
-      <h2>Interests</h2>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Full Stack Java Developer Intern</h3>
+      <p>Ctronics InfoTech Pvt. Ltd | Feb 2023 - Jul 2023</p>
       <ul>
-        <li>Open-source contribution</li>
-        <li>Competitive coding</li>
-        <li>Attending hackathons & tech seminars</li>
+        <li>Developed a responsive web application with HTML/CSS/JS</li>
+        <li>Implemented REST APIs in Java with Spring Boot</li>
+        <li>Optimized queries in PostgreSQL by 20%</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Programmer Trainee</h3>
+      <p>Cognizant | Jun 2022 - Aug 2022</p>
+      <ul>
+        <li>Completed training in modern tech stacks</li>
+        <li>Collaborated in team and code reviews</li>
       </ul>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact Me</h2>
+  <section id="technologies">
+    <h2>Technologies & Tools</h2>
+    <div class="tech-grid">
+      <div class="tech">PostgreSQL</div>
+      <div class="tech">Oracle 10g</div>
+      <div class="tech">Docker</div>
+      <div class="tech">Kubernetes</div>
+      <div class="tech">AWS</div>
+      <div class="tech">ChatGPT</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Let's get in touch!</h3>
+        <p>Open to freelance, full-time opportunities or collaboration in exciting tech projects.</p>
+      </div>
       <form action="https://formspree.io/f/xgvkavjp" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn">Send</button>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
       </form>
-      <div class="socials">
-        <a href="mailto:saurabhmohurle786@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/saurabh-mohurle">LinkedIn</a>
-        <a href="https://github.com/saurabhmohurle">GitHub</a>
-        <a href="https://instagram.com/saurabh_mohurle_">Instagram</a>
-      </div>
     </div>
   </section>
+
+  <footer>
+    <div class="socials">
+      <a href="https://github.com/saurabhmohurle" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/saurabh-mohurle/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/saurabh_mohurle_" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Saurabh Mohurle. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
