@@ -1,147 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saurabh Mohurle - Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Mohurle | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <img src="images/hero.jpg" alt="Saurabh Mohurle" class="hero-img">
-      <h1>Saurabh Mohurle</h1>
-      <p>Full Stack Developer | Java, Spring Boot, REST APIs</p>
-      <a href="#contact" class="cta-btn">Let's Collaborate</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I am a passionate full-stack developer with experience in various technologies. I love building applications that solve real-world problems and improve user experiences. I strive to continuously enhance my skills and contribute to open-source projects.</p>
-    <a href="#contact" class="cta-btn">Let's Collaborate</a>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-slider">
-      <div class="project-container">
-        <img src="images/oios1.jpg" alt="Project 1">
-        <div class="project-info">
-          <h3>Online Inward-Outward System</h3>
-          <p>This project allows tracking and managing inward and outward documents efficiently.</p>
-          <a href="https://github.com/saurabhmohurle/oios" target="_blank" class="github-link">View on GitHub</a>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <img src="images/hero.jpg" alt="Saurabh Mohurle" class="hero-img">
+            <h1>Saurabh Mohurle</h1>
         </div>
-      </div>
-      <div class="project-container">
-        <img src="images/sms1.jpg" alt="Project 2">
-        <div class="project-info">
-          <h3>Student Management System</h3>
-          <p>A complete solution for managing student records and their academic details.</p>
-          <a href="https://github.com/saurabhmohurle/sms" target="_blank" class="github-link">View on GitHub</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p>I am a passionate software developer with a focus on Java, Spring Boot, and modern technologies...</p>
+            <a href="#contact" class="cta-btn">Let's Collaborate</a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skills-category">
-        <h3>Languages</h3>
-        <div class="skills">
-          <i class="fab fa-java"></i>
-          <i class="fab fa-js-square"></i>
-          <i class="fab fa-python"></i>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-images">
+                    <img src="images/oios1.jpg" alt="Project 1" class="project-img">
+                    <img src="images/oios2.jpg" alt="Project 1" class="project-img center">
+                    <img src="images/oios3.jpg" alt="Project 1" class="project-img">
+                </div>
+                <div class="project-description">
+                    <h3>Online Inward-Outward System</h3>
+                    <p>A project that manages the inward and outward goods in an organization...</p>
+                    <a href="https://github.com/saurabhmohurle/oios" class="btn">View on GitHub</a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-images">
+                    <img src="images/sms1.jpg" alt="Project 2" class="project-img">
+                    <img src="images/sms2.jpg" alt="Project 2" class="project-img center">
+                    <img src="images/sms3.jpg" alt="Project 2" class="project-img">
+                </div>
+                <div class="project-description">
+                    <h3>Student Management System</h3>
+                    <p>An easy-to-use system for managing student information...</p>
+                    <a href="https://github.com/saurabhmohurle/sms" class="btn">View on GitHub</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="skills-category">
-        <h3>Frameworks</h3>
-        <div class="skills">
-          <i class="fab fa-java"></i>
-          <i class="fab fa-spring"></i>
-          <i class="fab fa-angular"></i>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <!-- Languages -->
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skills">
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/java/java-original.svg" alt="Java Logo" class="skill-logo"> Java</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/python/python-original.svg" alt="Python Logo" class="skill-logo"> Python</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/c/c-original.svg" alt="C Logo" class="skill-logo"> C</div>
+                </div>
+            </div>
+            <!-- Frameworks -->
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skills">
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/spring/spring-original.svg" alt="Spring Logo" class="skill-logo"> Spring Boot</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/spring/spring-plain.svg" alt="Spring MVC Logo" class="skill-logo"> Spring MVC</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/angularjs/angularjs-original.svg" alt="Angular Logo" class="skill-logo"> Angular</div>
+                </div>
+            </div>
+            <!-- Tools -->
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skills">
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/git/git-original.svg" alt="Git Logo" class="skill-logo"> Git</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/docker/docker-original.svg" alt="Docker Logo" class="skill-logo"> Docker</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/aws/aws-original.svg" alt="AWS Logo" class="skill-logo"> AWS</div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="skills-category">
-        <h3>Tools</h3>
-        <div class="skills">
-          <i class="fab fa-github"></i>
-          <i class="fab fa-docker"></i>
-          <i class="fab fa-aws"></i>
+    </section>
+
+    <!-- Technology and Tools Section -->
+    <section id="tools">
+        <h2>Technologies & Tools</h2>
+        <div class="tools-container">
+            <div class="tool">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes Logo">
+                <p>Kubernetes - Container orchestration platform.</p>
+            </div>
+            <div class="tool">
+                <img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/jenkins/jenkins-original.svg" alt="Jenkins Logo">
+                <p>Jenkins - Automation server for CI/CD pipelines.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <div class="education-container">
-      <div class="education-item">
-        <h3>MCA - SGBAU</h3>
-        <p>2021 - 2023 | CGPA: 8.38</p>
-      </div>
-      <div class="education-item">
-        <h3>BCCA - SPM</h3>
-        <p>2018 - 2021 | CGPA: 7.5</p>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xgvkavjp" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="experience-container">
-      <div class="experience-item">
-        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
-        <p>Feb 2023 - Jul 2023</p>
-        <p>Worked on building scalable web applications using Java, Spring Boot, and PostgreSQL.</p>
-      </div>
-      <div class="experience-item">
-        <h3>Programmer Trainee - Cognizant</h3>
-        <p>Jun 2022 - Aug 2022</p>
-        <p>Contributed to developing enterprise applications and worked with various Java technologies.</p>
-      </div>
-    </div>
-  </section>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xgvkavjp" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="cta-btn">Send Message</button>
-    </form>
-  </section>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
-  <!-- Social Links -->
-  <div class="social-links">
-    <a href="https://linkedin.com/in/saurabh-mohurle/" target="_blank" class="social-btn">LinkedIn</a>
-    <a href="https://github.com/saurabhmohurle" target="_blank" class="social-btn">GitHub</a>
-    <a href="https://instagram.com/saurabh_mohurle_" target="_blank" class="social-btn">Instagram</a>
-  </div>
-
-  <script src="scripts.js"></script>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>
