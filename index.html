@@ -12,9 +12,21 @@
       scroll-behavior: smooth;
     }
     .hero-bg {
-      background-image: url('images/hero.jpg'); /* Hero image */
+      background-image: url('images/hero.jpg');
       background-size: cover;
       background-position: center;
+    }
+    .slide {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .slide.active {
+      opacity: 1;
+      position: relative;
     }
   </style>
 </head>
@@ -58,30 +70,32 @@
       <div class="grid gap-10 grid-cols-1 sm:grid-cols-2">
 
         <!-- Project 1 -->
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transition-all">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl relative transition-all">
           <h3 class="text-xl font-semibold mb-4">Online Inward-Outward System</h3>
-          <div class="grid grid-cols-2 gap-4 mb-4">
-            <img src="images/oios1.jpg" alt="OIOS 1" class="rounded shadow w-full h-auto">
-            <img src="images/oios2.jpg" alt="OIOS 2" class="rounded shadow w-full h-auto">
-            <img src="images/oios3.jpg" alt="OIOS 3" class="rounded shadow w-full h-auto">
-            <img src="images/oios4.jpg" alt="OIOS 4" class="rounded shadow w-full h-auto">
-            <img src="images/oios5.jpg" alt="OIOS 5" class="rounded shadow w-full h-auto">
-            <img src="images/oios6.jpg" alt="OIOS 6" class="rounded shadow w-full h-auto">
-            <img src="images/oios7.jpg" alt="OIOS 7" class="rounded shadow w-full h-auto">
-            <img src="images/oios8.jpg" alt="OIOS 8" class="rounded shadow w-full h-auto">
-            <img src="images/oios9.jpg" alt="OIOS 9" class="rounded shadow w-full h-auto">
+          <div class="relative h-64 overflow-hidden rounded mb-4" id="slider-oios">
+            <!-- Slides -->
+            <img src="images/oios1.jpg" class="slide active rounded w-full h-full object-cover" />
+            <img src="images/oios2.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios3.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios4.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios5.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios6.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios7.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios8.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/oios9.jpg" class="slide rounded w-full h-full object-cover" />
           </div>
           <p class="text-gray-600 dark:text-gray-300">Document tracking system built with ASP.NET, C#, and MS-SQL. Reduced paper processing by 35%.</p>
           <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
         </div>
 
         <!-- Project 2 -->
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transition-all">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl relative transition-all">
           <h3 class="text-xl font-semibold mb-4">Student Management System</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-            <img src="images/sms1.jpg" alt="SMS 1" class="rounded shadow w-full h-auto">
-            <img src="images/sms2.jpg" alt="SMS 2" class="rounded shadow w-full h-auto">
-            <img src="images/sms3.jpg" alt="SMS 3" class="rounded shadow w-full h-auto">
+          <div class="relative h-64 overflow-hidden rounded mb-4" id="slider-sms">
+            <!-- Slides -->
+            <img src="images/sms1.jpg" class="slide active rounded w-full h-full object-cover" />
+            <img src="images/sms2.jpg" class="slide rounded w-full h-full object-cover" />
+            <img src="images/sms3.jpg" class="slide rounded w-full h-full object-cover" />
           </div>
           <p class="text-gray-600 dark:text-gray-300">REST API-driven backend using Spring Boot and Oracle for real-time student data management.</p>
           <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
@@ -122,10 +136,25 @@
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
     }
+
+    function startSlider(id) {
+      const container = document.getElementById(id);
+      const slides = container.querySelectorAll(".slide");
+      let current = 0;
+
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 3000);
+    }
+
     window.onload = () => {
       gsap.from(".fade-in", { duration: 1.5, opacity: 0, y: 30, stagger: 0.3 });
+      lucide.createIcons();
+      startSlider("slider-oios");
+      startSlider("slider-sms");
     };
-    lucide.createIcons();
   </script>
 </body>
 </html>
