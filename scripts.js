@@ -1,17 +1,10 @@
-// Lazy-load and fade-in images on scroll
-const images = document.querySelectorAll('.gallery-item img');
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('loaded');
-      observer.unobserve(entry.target);
-    }
+// Slideshow animation
+document.querySelectorAll('.slideshow').forEach(slideshow => {
+    let images = slideshow.querySelectorAll('img');
+    let index = 0;
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 3000);
   });
-}, {
-  threshold: 0.5
-});
-
-images.forEach(img => {
-  observer.observe(img);
-});
