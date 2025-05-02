@@ -5,106 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saurabh Mohurle Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="navbar">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#tools">Tech & Tools</a></li>
-        <li><a href="#contact">Let's Collaborate</a></li>
+        <li><a href="#tools">Technologies & Tools</a></li>
+        <li><a href="#contact" class="button-link">Let's Collaborate</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <div class="portrait-section">
-        <img src="images/portrait.jpg" alt="Saurabh Mohurle" class="portrait"/>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <img src="images/bg.jpg" alt="Background" class="background-image" />
+    <div class="hero-content">
+      <div class="portrait-container">
+        <img src="images/hero.jpg" alt="Saurabh Mohurle" class="portrait" />
         <h1 class="hero-name">Saurabh Mohurle</h1>
       </div>
     </div>
-  </header>
+  </section>
 
-  <section id="projects">
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
     <div class="project-container">
-      <h3>Project One</h3>
-      <div class="carousel" id="carousel1">
-        <button class="prev" onclick="prevSlide('carousel1')">&#10094;</button>
+      <h3>Project 1: OIOS</h3>
+      <div class="slider" id="slider1">
+        <button class="slide-btn prev" onclick="slide('slider1', -1)">&#10094;</button>
         <div class="slides">
-          <img src="images/project1-1.jpg" alt="">
-          <img src="images/project1-2.jpg" alt="" class="center">
-          <img src="images/project1-3.jpg" alt="">
+          <img src="images/oios1.jpg" alt="" />
+          <img src="images/oios2.jpg" alt="" />
+          <img src="images/oios3.jpg" alt="" />
+          <img src="images/oios4.jpg" alt="" />
+          <img src="images/oios5.jpg" alt="" />
+          <img src="images/oios6.jpg" alt="" />
+          <img src="images/oios7.jpg" alt="" />
+          <img src="images/oios8.jpg" alt="" />
+          <img src="images/oios9.jpg" alt="" />
         </div>
-        <button class="next" onclick="nextSlide('carousel1')">&#10095;</button>
+        <button class="slide-btn next" onclick="slide('slider1', 1)">&#10095;</button>
       </div>
     </div>
 
     <div class="project-container">
-      <h3>Project Two</h3>
-      <div class="carousel" id="carousel2">
-        <button class="prev" onclick="prevSlide('carousel2')">&#10094;</button>
+      <h3>Project 2: SMS</h3>
+      <div class="slider" id="slider2">
+        <button class="slide-btn prev" onclick="slide('slider2', -1)">&#10094;</button>
         <div class="slides">
-          <img src="images/project2-1.jpg" alt="">
-          <img src="images/project2-2.jpg" alt="" class="center">
-          <img src="images/project2-3.jpg" alt="">
+          <img src="images/sms1.jpg" alt="" />
+          <img src="images/sms2.jpg" alt="" />
+          <img src="images/sms3.jpg" alt="" />
         </div>
-        <button class="next" onclick="nextSlide('carousel2')">&#10095;</button>
+        <button class="slide-btn next" onclick="slide('slider2', 1)">&#10095;</button>
       </div>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="skills-section">
     <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-box">
+    <div class="skills-container">
+      <div class="skill-category">
         <h3>Languages</h3>
         <ul>
-          <li><img src="images/java_logo.png"> Java</li>
-          <li><img src="images/python_logo.png"> Python</li>
-          <li><img src="images/js_logo.png"> JavaScript</li>
+          <li><img src="images/java_logo.png" alt="Java" /> Java</li>
+          <li><img src="images/python_logo.png" alt="Python" /> Python</li>
         </ul>
       </div>
-      <div class="skill-box">
+      <div class="skill-category">
         <h3>Frameworks</h3>
         <ul>
-          <li><img src="images/react_logo.png"> React</li>
-          <li><img src="images/spring_logo.png"> Spring Boot</li>
-          <li><img src="images/node_logo.png"> Node.js</li>
+          <li><img src="images/react_logo.png" alt="React" /> React</li>
+          <li><img src="images/spring_logo.png" alt="Spring" /> Spring</li>
         </ul>
       </div>
-      <div class="skill-box">
+      <div class="skill-category">
         <h3>Tools</h3>
         <ul>
-          <li><img src="images/git_logo.png"> Git</li>
-          <li><img src="images/docker_logo.png"> Docker</li>
-          <li><img src="images/vscode_logo.png"> VS Code</li>
+          <li><img src="images/git_logo.png" alt="Git" /> Git</li>
+          <li><img src="images/vscode_logo.png" alt="VSCode" /> VSCode</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="tools">
+  <section id="tools" class="tools-section">
     <h2>Technologies & Tools</h2>
-    <div class="tools-grid">
-      <div class="tech-box">
-        <img src="images/aws_logo.png" alt="AWS" />
-        <p>AWS for scalable cloud infrastructure</p>
-      </div>
-      <div class="tech-box">
+    <div class="tools-container">
+      <div class="tool-box">
         <img src="images/docker_logo.png" alt="Docker" />
-        <p>Docker for containerization</p>
+        <p>Docker helps you containerize your applications for consistency across environments.</p>
       </div>
-      <div class="tech-box">
-        <img src="images/github_logo.png" alt="GitHub" />
-        <p>GitHub for version control and collaboration</p>
+      <div class="tool-box">
+        <img src="images/aws_logo.png" alt="AWS" />
+        <p>AWS provides scalable cloud infrastructure for your backend and hosting needs.</p>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <a href="https://www.instagram.com/saurabh_mohurle_" class="cta-button" target="_blank">Let's Collaborate</a>
-  </footer>
-
-  <script src="script.js"></script>
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 </body>
 </html>
