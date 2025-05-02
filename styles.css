@@ -1,31 +1,93 @@
-/* Image Gallery Layout */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #0f1117;
+    color: #eee;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
+    background: #141927;
+    box-shadow: 0 2px 10px #00fff7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
   
-  .gallery-item {
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  nav a {
+    color: #00fff7;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    color: #ff00e1;
+    transform: scale(1.1);
   }
   
-  .gallery-item img {
+  section {
+    padding: 60px 20px;
+    border-bottom: 1px solid #222;
+  }
+  
+  h2 {
+    color: #00ffcc;
+    font-size: 2em;
+  }
+  
+  ul li, p, h3 {
+    color: #ccc;
+  }
+  
+  .job, .project {
+    margin: 20px 0;
+  }
+  
+  input, textarea, button {
+    display: block;
     width: 100%;
-    height: auto;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: 0;
+    margin: 10px 0;
+    padding: 10px;
+    background: #1c1f26;
+    border: 1px solid #333;
+    color: white;
+    font-family: inherit;
   }
   
-  /* Hover Zoom Effect */
-  .gallery-item:hover img {
+  button {
+    background: #00fff7;
+    color: #000;
+    border: none;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: #ff00e1;
+    color: white;
+  }
+  
+  .socials a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #00fff7;
+    transition: 0.3s;
+  }
+  .socials a:hover {
+    color: #ff00e1;
+  }
+  
+  .slideshow img {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00fff7;
+    transition: transform 0.5s ease;
+  }
+  .slideshow img.active {
+    display: block;
+  }
+  .slideshow img:hover {
     transform: scale(1.05);
-    opacity: 1;
-  }
-  
-  /* Fade in once in view */
-  .gallery-item img.loaded {
-    opacity: 1;
   }
