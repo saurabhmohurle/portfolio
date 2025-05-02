@@ -1,120 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saurabh Mohurle | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Saurabh Mohurle</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Saurabh Mohurle</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero">
-    <h2>Java Developer | REST APIs | Cloud Enthusiast</h2>
-    <p>Turning ideas into scalable backend systems</p>
-    <a href="resume.pdf" target="_blank">📄 View Resume</a>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a backend-focused developer passionate about building reliable and high-performing systems. From RESTful APIs to cloud-based services, I love bringing structure and scalability to digital products.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Java (Core, J2EE)</li>
-      <li>Spring Boot, JPA</li>
-      <li>SQL, PostgreSQL, Oracle</li>
-      <li>Docker, Kubernetes, AWS</li>
-      <li>RESTful APIs, Microservices</li>
-    </ul>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div>
-      <h3>MCA - SGBAU (2021-2023)</h3>
-      <p>CGPA: 8.38</p>
-    </div>
-    <div>
-      <h3>BCCA - SPM, Chandrapur (2018-2021)</h3>
-      <p>CGPA: 7.5</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Hi, I'm Saurabh</h2>
+      <p class="hero-subtitle">Full Stack Java Developer | API Specialist | Cloud Enthusiast</p>
+      <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="job">
-      <h3>Full Stack Java Developer Intern – Ctronics InfoTech</h3>
-      <p>Feb 2023 – Jul 2023</p>
-      <ul>
-        <li>Built responsive apps using HTML, CSS, JS</li>
-        <li>Designed RESTful APIs with Java & Spring Boot</li>
-        <li>Optimized PostgreSQL queries</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Programmer Trainee – Cognizant</h3>
-      <p>Jun 2022 – Aug 2022</p>
-      <ul>
-        <li>Trained on Java, backend & SDLC methodologies</li>
-        <li>Contributed in team code reviews</li>
-      </ul>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate Java developer with hands-on experience in backend systems, REST APIs, and scalable applications. I love building clean, reliable, and efficient software solutions using modern technologies like Spring Boot, Docker, and PostgreSQL.</p>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="section colored">
+    <div class="container">
+      <h2>Projects</h2>
 
-    <div class="project">
-      <h3>Online Inward-Outward System</h3>
-      <p>ASP.NET, C#, MS-SQL</p>
-      <div class="slideshow">
-        <img src="images/oios1.jpg" class="active">
-        <img src="images/oios2.jpg">
-        <img src="images/oios3.jpg">
-        <!-- Add up to oios9.jpg -->
+      <div class="project">
+        <h3>Online Inward-Outward System</h3>
+        <p>Document tracking system using ASP.NET, C#, MS-SQL. Reduced processing time by 35%.</p>
+        <div class="project-gallery">
+          <img src="images/oios1.jpg" alt="Project Image">
+          <img src="images/oios2.jpg" alt="Project Image">
+          <img src="images/oios3.jpg" alt="Project Image">
+        </div>
       </div>
-    </div>
 
-    <div class="project">
-      <h3>Student Management System</h3>
-      <p>Java, Oracle 10g, Spring Boot</p>
-      <div class="slideshow">
-        <img src="images/sms1.jpg" class="active">
-        <img src="images/sms2.jpg">
-        <img src="images/sms3.jpg">
+      <div class="project">
+        <h3>Student Management System</h3>
+        <p>Student data manager built with Java, Spring Boot, Oracle. Increased data handling efficiency.</p>
+        <div class="project-gallery">
+          <img src="images/sms1.jpg" alt="Project Image">
+          <img src="images/sms2.jpg" alt="Project Image">
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/xgvkavjp" method="POST">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <div class="socials">
-      <a href="mailto:saurabhmohurle786@gmail.com">📧 Email</a>
-      <a href="https://linkedin.com/in/saurabh-mohurle">🔗 LinkedIn</a>
-      <a href="https://github.com/saurabhmohurle">🐙 GitHub</a>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>REST APIs</li>
+        <li>SQL</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
     </div>
   </section>
 
-  <script src="scripts.js"></script>
+  <!-- Education Section -->
+  <section id="education" class="section colored">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MCA</strong> - SGBAU (2021–2023) — CGPA: 8.38</li>
+        <li><strong>BCCA</strong> - SPM College (2018–2021) — CGPA: 7.5</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
+        <p>Feb 2023 – Jul 2023</p>
+        <ul>
+          <li>Built responsive UIs and REST APIs using Java, Spring Boot.</li>
+          <li>Enhanced database efficiency with PostgreSQL optimization.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <h3>Programmer Trainee - Cognizant</h3>
+        <p>Jun 2022 – Aug 2022</p>
+        <ul>
+          <li>Completed advanced technical training.</li>
+          <li>Collaborated in a team, participated in code reviews.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section id="technologies" class="section colored">
+    <div class="container">
+      <h2>Technologies & Tools</h2>
+      <ul class="tags">
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>PostgreSQL</li>
+        <li>AWS</li>
+        <li>Oracle 10g</li>
+        <li>Postman</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="container">
+      <h2>Interests</h2>
+      <ul>
+        <li>Open-source contribution</li>
+        <li>Competitive coding</li>
+        <li>Attending hackathons & tech seminars</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xgvkavjp" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <div class="socials">
+        <a href="mailto:saurabhmohurle786@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/saurabh-mohurle">LinkedIn</a>
+        <a href="https://github.com/saurabhmohurle">GitHub</a>
+        <a href="https://instagram.com/saurabh_mohurle_">Instagram</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
