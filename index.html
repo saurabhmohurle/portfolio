@@ -1,143 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Mohurle | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saurabh Mohurle Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#tools">Tech & Tools</a></li>
+        <li><a href="#contact">Let's Collaborate</a></li>
+      </ul>
     </nav>
+    <div class="hero">
+      <div class="portrait-section">
+        <img src="images/portrait.jpg" alt="Saurabh Mohurle" class="portrait"/>
+        <h1 class="hero-name">Saurabh Mohurle</h1>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <img src="images/hero.jpg" alt="Saurabh Mohurle" class="hero-img">
-            <h1>Saurabh Mohurle</h1>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+      <h3>Project One</h3>
+      <div class="carousel" id="carousel1">
+        <button class="prev" onclick="prevSlide('carousel1')">&#10094;</button>
+        <div class="slides">
+          <img src="images/project1-1.jpg" alt="">
+          <img src="images/project1-2.jpg" alt="" class="center">
+          <img src="images/project1-3.jpg" alt="">
         </div>
-    </section>
+        <button class="next" onclick="nextSlide('carousel1')">&#10095;</button>
+      </div>
+    </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="about-container">
-            <h2>About Me</h2>
-            <p>I am a passionate software developer with a focus on Java, Spring Boot, and modern technologies...</p>
-            <a href="#contact" class="cta-btn">Let's Collaborate</a>
+    <div class="project-container">
+      <h3>Project Two</h3>
+      <div class="carousel" id="carousel2">
+        <button class="prev" onclick="prevSlide('carousel2')">&#10094;</button>
+        <div class="slides">
+          <img src="images/project2-1.jpg" alt="">
+          <img src="images/project2-2.jpg" alt="" class="center">
+          <img src="images/project2-3.jpg" alt="">
         </div>
-    </section>
+        <button class="next" onclick="nextSlide('carousel2')">&#10095;</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-container">
-            <!-- Project 1 -->
-            <div class="project">
-                <div class="project-images">
-                    <img src="images/oios1.jpg" alt="Project 1" class="project-img">
-                    <img src="images/oios2.jpg" alt="Project 1" class="project-img center">
-                    <img src="images/oios3.jpg" alt="Project 1" class="project-img">
-                </div>
-                <div class="project-description">
-                    <h3>Online Inward-Outward System</h3>
-                    <p>A project that manages the inward and outward goods in an organization...</p>
-                    <a href="https://github.com/saurabhmohurle/oios" class="btn">View on GitHub</a>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project">
-                <div class="project-images">
-                    <img src="images/sms1.jpg" alt="Project 2" class="project-img">
-                    <img src="images/sms2.jpg" alt="Project 2" class="project-img center">
-                    <img src="images/sms3.jpg" alt="Project 2" class="project-img">
-                </div>
-                <div class="project-description">
-                    <h3>Student Management System</h3>
-                    <p>An easy-to-use system for managing student information...</p>
-                    <a href="https://github.com/saurabhmohurle/sms" class="btn">View on GitHub</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-box">
+        <h3>Languages</h3>
+        <ul>
+          <li><img src="images/java_logo.png"> Java</li>
+          <li><img src="images/python_logo.png"> Python</li>
+          <li><img src="images/js_logo.png"> JavaScript</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Frameworks</h3>
+        <ul>
+          <li><img src="images/react_logo.png"> React</li>
+          <li><img src="images/spring_logo.png"> Spring Boot</li>
+          <li><img src="images/node_logo.png"> Node.js</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Tools</h3>
+        <ul>
+          <li><img src="images/git_logo.png"> Git</li>
+          <li><img src="images/docker_logo.png"> Docker</li>
+          <li><img src="images/vscode_logo.png"> VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <!-- Languages -->
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skills">
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/java/java-original.svg" alt="Java Logo" class="skill-logo"> Java</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/python/python-original.svg" alt="Python Logo" class="skill-logo"> Python</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/c/c-original.svg" alt="C Logo" class="skill-logo"> C</div>
-                </div>
-            </div>
-            <!-- Frameworks -->
-            <div class="skill-category">
-                <h3>Frameworks</h3>
-                <div class="skills">
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/spring/spring-original.svg" alt="Spring Logo" class="skill-logo"> Spring Boot</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/spring/spring-plain.svg" alt="Spring MVC Logo" class="skill-logo"> Spring MVC</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/angularjs/angularjs-original.svg" alt="Angular Logo" class="skill-logo"> Angular</div>
-                </div>
-            </div>
-            <!-- Tools -->
-            <div class="skill-category">
-                <h3>Tools</h3>
-                <div class="skills">
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/git/git-original.svg" alt="Git Logo" class="skill-logo"> Git</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/docker/docker-original.svg" alt="Docker Logo" class="skill-logo"> Docker</div>
-                    <div class="skill"><img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/aws/aws-original.svg" alt="AWS Logo" class="skill-logo"> AWS</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="tools">
+    <h2>Technologies & Tools</h2>
+    <div class="tools-grid">
+      <div class="tech-box">
+        <img src="images/aws_logo.png" alt="AWS" />
+        <p>AWS for scalable cloud infrastructure</p>
+      </div>
+      <div class="tech-box">
+        <img src="images/docker_logo.png" alt="Docker" />
+        <p>Docker for containerization</p>
+      </div>
+      <div class="tech-box">
+        <img src="images/github_logo.png" alt="GitHub" />
+        <p>GitHub for version control and collaboration</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Technology and Tools Section -->
-    <section id="tools">
-        <h2>Technologies & Tools</h2>
-        <div class="tools-container">
-            <div class="tool">
-                <img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes Logo">
-                <p>Kubernetes - Container orchestration platform.</p>
-            </div>
-            <div class="tool">
-                <img src="https://cdn.jsdelivr.net/npm/devicon@2.14.0/icons/jenkins/jenkins-original.svg" alt="Jenkins Logo">
-                <p>Jenkins - Automation server for CI/CD pipelines.</p>
-            </div>
-        </div>
-    </section>
+  <footer id="contact">
+    <a href="https://www.instagram.com/saurabh_mohurle_" class="cta-button" target="_blank">Let's Collaborate</a>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="https://formspree.io/f/xgvkavjp" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
