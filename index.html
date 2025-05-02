@@ -1,119 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saurabh Mohurle Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Mohurle | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#tools">Technologies & Tools</a></li>
-        <li><a href="#contact" class="button-link">Let's Collaborate</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Saurabh Mohurle</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section id="hero" class="hero-section">
-    <img src="images/bg.jpg" alt="Background" class="background-image" />
-    <div class="hero-content">
-      <div class="portrait-container">
-        <img src="images/hero.jpg" alt="Saurabh Mohurle" class="portrait" />
-        <h1 class="hero-name">Saurabh Mohurle</h1>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h2 class="hero-title">Hi, I'm Saurabh</h2>
+      <p class="hero-subtitle">Full Stack Java Developer | API Specialist | Cloud Enthusiast</p>
+      <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
     </div>
   </section>
 
-  <section id="projects" class="projects-section">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <h3>Project 1: OIOS</h3>
-      <div class="slider" id="slider1">
-        <button class="slide-btn prev" onclick="slide('slider1', -1)">&#10094;</button>
-        <div class="slides">
-          <img src="images/oios1.jpg" alt="" />
-          <img src="images/oios2.jpg" alt="" />
-          <img src="images/oios3.jpg" alt="" />
-          <img src="images/oios4.jpg" alt="" />
-          <img src="images/oios5.jpg" alt="" />
-          <img src="images/oios6.jpg" alt="" />
-          <img src="images/oios7.jpg" alt="" />
-          <img src="images/oios8.jpg" alt="" />
-          <img src="images/oios9.jpg" alt="" />
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am a passionate Java developer with hands-on experience in backend systems, REST APIs, and scalable applications. I love building clean, reliable, and efficient software solutions using modern technologies like Spring Boot, Docker, and PostgreSQL.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section colored">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Online Inward-Outward System</h3>
+        <p>Document tracking system using ASP.NET, C#, MS-SQL. Reduced processing time by 35%.</p>
+        <div class="project-gallery">
+          <img src="images/oios1.jpg" alt="Project Image">
+          <img src="images/oios2.jpg" alt="Project Image">
+          <img src="images/oios3.jpg" alt="Project Image">
         </div>
-        <button class="slide-btn next" onclick="slide('slider1', 1)">&#10095;</button>
       </div>
-    </div>
 
-    <div class="project-container">
-      <h3>Project 2: SMS</h3>
-      <div class="slider" id="slider2">
-        <button class="slide-btn prev" onclick="slide('slider2', -1)">&#10094;</button>
-        <div class="slides">
-          <img src="images/sms1.jpg" alt="" />
-          <img src="images/sms2.jpg" alt="" />
-          <img src="images/sms3.jpg" alt="" />
+      <div class="project">
+        <h3>Student Management System</h3>
+        <p>Student data manager built with Java, Spring Boot, Oracle. Increased data handling efficiency.</p>
+        <div class="project-gallery">
+          <img src="images/sms1.jpg" alt="Project Image">
+          <img src="images/sms2.jpg" alt="Project Image">
         </div>
-        <button class="slide-btn next" onclick="slide('slider2', 1)">&#10095;</button>
       </div>
     </div>
   </section>
 
-  <section id="skills" class="skills-section">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-category">
-        <h3>Languages</h3>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>Java</li>
+        <li>Spring Boot</li>
+        <li>REST APIs</li>
+        <li>SQL</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section colored">
+    <div class="container">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>MCA</strong> - SGBAU (2021–2023) — CGPA: 8.38</li>
+        <li><strong>BCCA</strong> - SPM College (2018–2021) — CGPA: 7.5</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
+        <p>Feb 2023 – Jul 2023</p>
         <ul>
-          <li><img src="images/java_logo.png" alt="Java" /> Java</li>
-          <li><img src="images/python_logo.png" alt="Python" /> Python</li>
+          <li>Built responsive UIs and REST APIs using Java, Spring Boot.</li>
+          <li>Enhanced database efficiency with PostgreSQL optimization.</li>
         </ul>
       </div>
-      <div class="skill-category">
-        <h3>Frameworks</h3>
+      <div class="job">
+        <h3>Programmer Trainee - Cognizant</h3>
+        <p>Jun 2022 – Aug 2022</p>
         <ul>
-          <li><img src="images/react_logo.png" alt="React" /> React</li>
-          <li><img src="images/spring_logo.png" alt="Spring" /> Spring</li>
-        </ul>
-      </div>
-      <div class="skill-category">
-        <h3>Tools</h3>
-        <ul>
-          <li><img src="images/git_logo.png" alt="Git" /> Git</li>
-          <li><img src="images/vscode_logo.png" alt="VSCode" /> VSCode</li>
+          <li>Completed advanced technical training.</li>
+          <li>Collaborated in a team, participated in code reviews.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section id="tools" class="tools-section">
-    <h2>Technologies & Tools</h2>
-    <div class="tools-container">
-      <div class="tool-box">
-        <img src="images/docker_logo.png" alt="Docker" />
-        <p>Docker helps you containerize your applications for consistency across environments.</p>
-      </div>
-      <div class="tool-box">
-        <img src="images/aws_logo.png" alt="AWS" />
-        <p>AWS provides scalable cloud infrastructure for your backend and hosting needs.</p>
-      </div>
+  <!-- Technologies Section -->
+  <section id="technologies" class="section colored">
+    <div class="container">
+      <h2>Technologies & Tools</h2>
+      <ul class="tags">
+        <li>Docker</li>
+        <li>Kubernetes</li>
+        <li>PostgreSQL</li>
+        <li>AWS</li>
+        <li>Oracle 10g</li>
+        <li>Postman</li>
+      </ul>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- Interests Section -->
+  <section id="interests" class="section">
+    <div class="container">
+      <h2>Interests</h2>
+      <ul>
+        <li>Open-source contribution</li>
+        <li>Competitive coding</li>
+        <li>Attending hackathons & tech seminars</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xgvkavjp" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+      <div class="socials">
+        <a href="mailto:saurabhmohurle786@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/saurabh-mohurle">LinkedIn</a>
+        <a href="https://github.com/saurabhmohurle">GitHub</a>
+        <a href="https://instagram.com/saurabh_mohurle_">Instagram</a>
+      </div>
+    </div>
   </section>
 </body>
 </html>
