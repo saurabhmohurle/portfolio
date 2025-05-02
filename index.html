@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Saurabh Mohurle | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
@@ -12,7 +12,7 @@
       scroll-behavior: smooth;
     }
     .hero-bg {
-      background-image: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1470&q=80');
+      background-image: url('images/hero.jpg'); /* Place your hero image as images/hero.jpg */
       background-size: cover;
       background-position: center;
     }
@@ -33,7 +33,7 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="relative text-center py-32 hero-bg text-white dark:text-white">
     <div class="bg-black bg-opacity-60 absolute inset-0 z-0"></div>
     <div class="relative z-10 fade-in">
@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="py-20 px-6 bg-white dark:bg-gray-900 fade-in">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">About Me</h2>
@@ -51,25 +51,31 @@
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Section -->
   <section id="projects" class="py-20 px-6 bg-gray-100 dark:bg-gray-800 fade-in">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-5xl mx-auto">
       <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-10">
+      <div class="grid gap-10 grid-cols-1 sm:grid-cols-2">
 
         <!-- Project 1 -->
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-          <h3 class="text-xl font-semibold mb-2">Student Management System</h3>
-          <img src="https://via.placeholder.com/600x400?text=SMS+1" alt="Project thumbnail" class="rounded cursor-pointer hover:opacity-80 transition" onclick="openGallery('sms')">
-          <p class="text-gray-600 dark:text-gray-300 mt-2">REST API-driven backend using Spring Boot and Oracle for real-time student data management.</p>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transition-all">
+          <h3 class="text-xl font-semibold mb-2">Online Inward-Outward System</h3>
+          <div class="space-y-4 mb-4">
+            <img src="images/oios1.jpg" alt="OIOS Screenshot 1" class="rounded shadow-md w-full">
+            <img src="images/oios2.jpg" alt="OIOS Screenshot 2" class="rounded shadow-md w-full">
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">Document tracking system built with ASP.NET, C#, and MS-SQL. Reduced paper processing by 35%.</p>
           <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
         </div>
 
         <!-- Project 2 -->
-        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl">
-          <h3 class="text-xl font-semibold mb-2">Online Inward-Outward System</h3>
-          <img src="/images/project (7).png" alt="Project thumbnail" class="rounded cursor-pointer hover:opacity-80 transition" onclick="openGallery('oios')">
-          <p class="text-gray-600 dark:text-gray-300 mt-2">Document tracking system built with ASP.NET, C#, and MS-SQL. Reduced paper processing by 35%.</p>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-xl transition-all">
+          <h3 class="text-xl font-semibold mb-2">Student Management System</h3>
+          <div class="space-y-4 mb-4">
+            <img src="images/sms1.jpg" alt="SMS Screenshot 1" class="rounded shadow-md w-full">
+            <img src="images/sms2.jpg" alt="SMS Screenshot 2" class="rounded shadow-md w-full">
+          </div>
+          <p class="text-gray-600 dark:text-gray-300">REST API-driven backend using Spring Boot and Oracle for real-time student data management.</p>
           <a href="https://github.com/saurabhmohurle" class="text-blue-600 dark:text-blue-400 mt-4 inline-block">View on GitHub</a>
         </div>
 
@@ -77,27 +83,19 @@
     </div>
   </section>
 
-  <!-- Modal Gallery -->
-  <div id="galleryModal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
-    <div class="relative bg-white dark:bg-gray-800 p-4 rounded max-w-3xl w-full max-h-[90vh] overflow-y-auto">
-      <button onclick="closeGallery()" class="absolute top-2 right-4 text-black dark:text-white text-2xl font-bold">&times;</button>
-      <div id="galleryContent" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-        <!-- Images dynamically inserted here -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="py-20 px-6 bg-white dark:bg-gray-900 fade-in">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Contact</h2>
       <p class="text-gray-700 dark:text-gray-300 mb-6">Send me a message directly or connect with me on GitHub/LinkedIn.</p>
+
       <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded dark:bg-gray-800" />
-        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded dark:bg-gray-800" />
+        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border rounded dark:bg-gray-800">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border rounded dark:bg-gray-800">
         <textarea name="message" placeholder="Your Message" rows="4" required class="w-full px-4 py-2 border rounded dark:bg-gray-800"></textarea>
         <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send Message</button>
       </form>
+
       <div class="mt-6 flex justify-center space-x-6 text-blue-600 dark:text-blue-400">
         <a href="mailto:saurabhmohurle786@gmail.com"><i data-lucide="mail"></i></a>
         <a href="https://linkedin.com/in/saurabh-mohurle" target="_blank"><i data-lucide="linkedin"></i></a>
@@ -116,38 +114,10 @@
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
     }
-
     window.onload = () => {
       gsap.from(".fade-in", { duration: 1.5, opacity: 0, y: 30, stagger: 0.3 });
-      lucide.createIcons();
     };
-
-    const projectImages = {
-      sms: [
-        "https://via.placeholder.com/600x400?text=SMS+1",
-        "https://via.placeholder.com/600x400?text=SMS+2",
-        "https://via.placeholder.com/600x400?text=SMS+3"
-      ],
-      oios: [
-        "https://via.placeholder.com/600x400?text=OIOS+1",
-        "https://via.placeholder.com/600x400?text=OIOS+2",
-        "https://via.placeholder.com/600x400?text=OIOS+3"
-      ]
-    };
-
-    function openGallery(key) {
-      const container = document.getElementById("galleryContent");
-      container.innerHTML = projectImages[key]
-        .map(src => `<img src="${src}" class="rounded shadow hover:scale-105 transition" alt="Project Image">`)
-        .join("");
-      document.getElementById("galleryModal").classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeGallery() {
-      document.getElementById("galleryModal").classList.add("hidden");
-      document.body.style.overflow = "";
-    }
+    lucide.createIcons();
   </script>
 </body>
 </html>
