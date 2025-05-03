@@ -1,64 +1,37 @@
-// Scroll reveal animation
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll("section");
+// Automatic image slider for projects
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.project-slider');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, {
-    threshold: 0.1,
+  sliders.forEach(slider => {
+    const images = slider.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      images.forEach((img, i) => {
+        img.style.display = i === currentIndex ? 'inline-block' : 'none';
+      });
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    showNextImage();
+    setInterval(showNextImage, 3000);
   });
 
-  sections.forEach(section => {
-    section.classList.add("hidden");
-    observer.observe(section);
+  // Add glow effect on hover
+  const hoverElements = document.querySelectorAll(
+    'nav a, .skill-item, .project, .timeline, .contact button'
+  );
+
+  hoverElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      el.style.boxShadow = '0 0 10px #00f2fe';
+    });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.boxShadow = 'none';
+    });
   });
 });
-
-// Optional: Smooth scroll to anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
-});
-
-// Project image slider (basic)
-const projectGallery = document.querySelectorAll('.project-gallery img');
-projectGallery.forEach(img => {
-  img.addEventListener('click', () => {
-    const src = img.getAttribute('src');
-    const overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.top = '0';
-    overlay.style.left = '0';
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
-    overlay.style.background = 'rgba(0,0,0,0.85)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.zIndex = '9999';
-
-    const fullImage = document.createElement('img');
-    fullImage.src = src;
-    fullImage.style.maxWidth = '90%';
-    fullImage.style.maxHeight = '90%';
-    fullImage.style.borderRadius = '10px';
-    fullImage.style.boxShadow = '0 0 30px rgba(0,255,255,0.4)';
-    fullImage.style.transition = 'transform 0.3s ease';
-    fullImage.style.transform = 'scale(1.05)';
-
-    overlay.appendChild(fullImage);
-    document.body.appendChild(overlay);
-
-    overlay.addEventListener('click', () => {
-      document.body.removeChild(overlay);
-    });
-  });
+document.getElementById('darkToggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
 });
