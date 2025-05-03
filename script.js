@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(animateWord, 400);
 });
+
 const carousel = document.getElementById('carousel3d-project1');
 const imgs = carousel.getElementsByTagName('img');
 let current = 0;
