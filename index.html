@@ -1,167 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saurabh Mohurle | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="navbar">
-    <div class="container">
-      <h1 class="logo">Saurabh Mohurle</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#technologies">Technologies</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('skills')">Skills</button>
+    <button onclick="scrollToSection('projects')">Projects</button>
+    <button onclick="scrollToSection('experience')">Experience</button>
+    <button onclick="scrollToSection('education')">Education</button>
+    <button onclick="scrollToSection('contact')">Contact</button>
+    <button id="darkToggle" class="dark-toggle">🌓</button>
+
+  </nav>
+
+  <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <h2 class="hero-title">Hi, I'm Saurabh</h2>
-      <p class="hero-subtitle">Full Stack Java Developer | API Specialist | Cloud Enthusiast</p>
-      <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a passionate Java developer with hands-on experience in backend systems, REST APIs, and scalable applications. I love building clean, reliable, and efficient software solutions using modern technologies like Spring Boot, Docker, and PostgreSQL.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section colored">
-    <div class="container">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>Online Inward-Outward System</h3>
-        <p>Document tracking system using ASP.NET, C#, MS-SQL. Reduced processing time by 35%.</p>
-        <div class="project-gallery">
-          <img src="images/oios1.jpg" alt="Project Image">
-          <img src="images/oios2.jpg" alt="Project Image">
-          <img src="images/oios3.jpg" alt="Project Image">
-        </div>
-      </div>
-
-      <div class="project">
-        <h3>Student Management System</h3>
-        <p>Student data manager built with Java, Spring Boot, Oracle. Increased data handling efficiency.</p>
-        <div class="project-gallery">
-          <img src="images/sms1.jpg" alt="Project Image">
-          <img src="images/sms2.jpg" alt="Project Image">
-        </div>
+    <div class="hero-content">
+      <img src="images/hero.jpg" alt="Saurabh" class="hero-img" />
+      <div class="hero-text">
+        <h1>Saurabh Mohurle</h1>
+        <p>🚀 Turning ideas into reality with code, design, and relentless curiosity.</p>
+        <p>🧠 Code. Create. Conquer. That’s how I craft digital experiences.</p>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="tags">
-        <li>Java</li>
-        <li>Spring Boot</li>
-        <li>REST APIs</li>
-        <li>SQL</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-      </ul>
-    </div>
+  <!-- About -->
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Saurabh Mohurle,<br> a passionate Backend Developer with a strong foundation in Java, web technologies, and scalable backend systems. My journey into tech began with a deep curiosity about how systems work and evolved into a commitment to building smart, user-friendly solutions that make a real-world impact.<br>
+      I hold a Master's in Computer Applications (MCA) from Sant Gadge Baba Amravati University and a Bachelor's in Commerce with Computer Applications. What sets me apart is my blend of analytical thinking and creative problem-solving — shaped by both academic learning and hands-on work experience.
+      During my internship at Ctronics InfoTech, I helped develop real-world applications using Java, Spring Boot, and PostgreSQL — collaborating in an agile team to deliver responsive, dynamic software. At Cognizant, I trained rigorously in full-stack technologies, sharpening my skills in teamwork, code quality, and modern development practices.<br>
+      Beyond work, I’m an active contributor to open-source communities and a regular participant in coding challenges on platforms like LeetCode, CodeChef, and GeeksforGeeks. I enjoy solving real-world problems, exploring futuristic tech like AI/ML, and continuously leveling up through projects and hackathons.<br>
+      I'm not just a developer — I’m a tech enthusiast who loves to learn fast, adapt faster, and build meaningful solutions that stand the test of time.
   </section>
 
-  <!-- Education Section -->
-  <section id="education" class="section colored">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MCA</strong> - SGBAU (2021–2023) — CGPA: 8.38</li>
-        <li><strong>BCCA</strong> - SPM College (2018–2021) — CGPA: 7.5</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="job">
-        <h3>Full Stack Java Developer Intern - Ctronics InfoTech</h3>
-        <p>Feb 2023 – Jul 2023</p>
-        <ul>
-          <li>Built responsive UIs and REST APIs using Java, Spring Boot.</li>
-          <li>Enhanced database efficiency with PostgreSQL optimization.</li>
+  <!-- Skills -->
+  <section id="skills" class="container">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-row">
+      <div class="skills-category-block">
+        <h3>Languages</h3>
+        <ul class="skills-list">
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /> Java</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /> JavaScript</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C/C++ logo"> C/C++</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /> Python</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" /> SQL</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript logo"> TypeScript</li>
         </ul>
       </div>
-      <div class="job">
-        <h3>Programmer Trainee - Cognizant</h3>
-        <p>Jun 2022 – Aug 2022</p>
-        <ul>
-          <li>Completed advanced technical training.</li>
-          <li>Collaborated in a team, participated in code reviews.</li>
+      <div class="skills-category-block">
+        <h3>Frameworks</h3>
+        <ul class="skills-list">
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" /> Spring Boot</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /> JPA</li>
+        </ul>
+      </div>
+      <div class="skills-category-block">
+        <h3>Tools & Platforms</h3>
+        <ul class="skills-list">
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" /> GitHub</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" /> Docker</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS logo"> AWS</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" /> PostgreSQL</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Technologies Section -->
-  <section id="technologies" class="section colored">
-    <div class="container">
-      <h2>Technologies & Tools</h2>
-      <ul class="tags">
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>PostgreSQL</li>
-        <li>AWS</li>
-        <li>Oracle 10g</li>
-        <li>Postman</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Projects -->
+  <section id="projects" class="container">
+    <h2>Projects</h2>
 
-  <!-- Interests Section -->
-  <section id="interests" class="section">
-    <div class="container">
-      <h2>Interests</h2>
-      <ul>
-        <li>Open-source contribution</li>
-        <li>Competitive coding</li>
-        <li>Attending hackathons & tech seminars</li>
-      </ul>
+    <div class="project">
+      <h3>Online Inward-Outward System</h3>
+      <p>
+        A public relations document tracking system designed to enhance processing and tracking. Improved processing time by 35% and ensured 99.9% document accuracy. Built using HTML, CSS, ASP.NET, C#, and MS-SQL.
+      </p>
+      <div class="slider">
+        <div class="slide-wrapper">
+          <img src="images/oios1.jpg" />
+          <img src="images/oios2.jpg" />
+          <img src="images/oios3.jpg" />
+          <img src="images/oios4.jpg" />
+          <img src="images/oios5.jpg" />
+          <img src="images/oios6.jpg" />
+          <img src="images/oios7.jpg" />
+          <img src="images/oios8.jpg" />
+          <img src="images/oios9.jpg" />
+        </div>
+      </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xgvkavjp" method="POST">
-        <input type="text" name="name" placeholder="Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-        <button type="submit" class="btn">Send</button>
-      </form>
-      <div class="socials">
-        <a href="mailto:saurabhmohurle786@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/saurabh-mohurle">LinkedIn</a>
-        <a href="https://github.com/saurabhmohurle">GitHub</a>
-        <a href="https://instagram.com/saurabh_mohurle_">Instagram</a>
+    <div class="project">
+      <h3>Student Management System</h3>
+      <p>
+        This system streamlines student data management and real-time updates for teachers/admins. Built using Core Java, J2SE, Spring Boot, Oracle DB, and REST APIs, it improves data accuracy and scalability.
+      </p>
+      <div class="slider">
+        <div class="slide-wrapper">
+          <img src="images/sms1.jpg" />
+          <img src="images/sms2.jpg" />
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Work Experience -->
+  <section id="experience" class="container">
+    <h2>Work Experience</h2>
+
+    <div class="exp-block">
+      <h3>Full Stack Java Developer Intern</h3>
+      <h4>Ctronics InfoTech Pvt. Ltd, Amravati | Feb 2023 – Jul 2023</h4>
+      <ul>
+        <li>Developed responsive web apps using HTML, CSS, JS, improving UX by 15%.</li>
+        <li>Integrated RESTful APIs with Java & Spring Boot.</li>
+        <li>Optimized PostgreSQL queries and implemented reusable OOP principles.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <h3>Programmer Trainee</h3>
+      <h4>Cognizant, Pune | Jun 2022 – Aug 2022</h4>
+      <ul>
+        <li>Completed rigorous full-stack training with 40% faster learning performance.</li>
+        <li>Contributed to code reviews and team collaborations effectively.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="container">
+    <h2>Education</h2>
+
+    <div class="edu-block">
+      <h3>Master of Computer Applications (MCA)</h3>
+      <h4>SGBAU, Amravati | 2021–2023 | CGPA: 8.38</h4>
+    </div>
+
+    <div class="edu-block">
+      <h3>Bachelor of Commerce in Computer Applications (BCCA)</h3>
+      <h4>Sardar Patel College, Chandrapur | 2018–2021 | CGPA: 7.5</h4>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact Me</h2>
+    <p class="collab">Let's collaborate to build something amazing together. Whether you have a project in mind or just want to connect, feel free to drop me a message!</p>
+    <form action="https://formspree.io/f/xgvkavjp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <a href="https://linkedin.com/in/saurabh-mohurle/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+    </a>
+    <a href="https://instagram.com/saurabh_mohurle_" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+    </a>
+    <a href="https://github.com/saurabhmohurle" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+    </a>
+    
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 </body>
 </html>
