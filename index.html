@@ -26,8 +26,7 @@
       <img src="images/hero.jpg" alt="Saurabh" class="hero-img" />
       <div class="hero-text">
         <h1>Saurabh Mohurle</h1>
-        <p>🚀 Turning ideas into reality with code, design, and relentless curiosity.</p>
-        <p>🧠 Code. Create. Conquer. That’s how I craft digital experiences.</p>
+        <p id="typing-text"></p>
       </div>
     </div>
   </section>
@@ -35,12 +34,13 @@
   <!-- About -->
   <section id="about" class="container">
     <h2>About Me</h2>
-    <p>
+    <p id="about-text">
       Hi, I'm Saurabh Mohurle,<br> a passionate Backend Developer with a strong foundation in Java, web technologies, and scalable backend systems. My journey into tech began with a deep curiosity about how systems work and evolved into a commitment to building smart, user-friendly solutions that make a real-world impact.<br>
       I hold a Master's in Computer Applications (MCA) from Sant Gadge Baba Amravati University and a Bachelor's in Commerce with Computer Applications. What sets me apart is my blend of analytical thinking and creative problem-solving — shaped by both academic learning and hands-on work experience.
       During my internship at Ctronics InfoTech, I helped develop real-world applications using Java, Spring Boot, and PostgreSQL — collaborating in an agile team to deliver responsive, dynamic software. At Cognizant, I trained rigorously in full-stack technologies, sharpening my skills in teamwork, code quality, and modern development practices.<br>
       Beyond work, I’m an active contributor to open-source communities and a regular participant in coding challenges on platforms like LeetCode, CodeChef, and GeeksforGeeks. I enjoy solving real-world problems, exploring futuristic tech like AI/ML, and continuously leveling up through projects and hackathons.<br>
       I'm not just a developer — I’m a tech enthusiast who loves to learn fast, adapt faster, and build meaningful solutions that stand the test of time.
+    </p>
   </section>
 
   <!-- Skills -->
@@ -86,18 +86,24 @@
       <p>
         A public relations document tracking system designed to enhance processing and tracking. Improved processing time by 35% and ensured 99.9% document accuracy. Built using HTML, CSS, ASP.NET, C#, and MS-SQL.
       </p>
-      <div class="slider">
-        <div class="slide-wrapper">
-          <img src="images/oios1.jpg" />
-          <img src="images/oios2.jpg" />
-          <img src="images/oios3.jpg" />
-          <img src="images/oios4.jpg" />
-          <img src="images/oios5.jpg" />
-          <img src="images/oios6.jpg" />
-          <img src="images/oios7.jpg" />
-          <img src="images/oios8.jpg" />
-          <img src="images/oios9.jpg" />
+      <div class="carousel-wrapper">
+        <div class="carousel3d-container">
+          <div class="carousel3d" id="carousel3d-project1">
+            <img src="images/oios1.jpg" alt="Project 1 Image">
+            <img src="images/oios2.jpg" alt="Project 1 Image">
+            <img src="images/oios3.jpg" alt="Project 1 Image">
+            <img src="images/oios4.jpg" alt="Project 1 Image">
+            <img src="images/oios5.jpg" alt="Project 1 Image">
+            <img src="images/oios6.jpg" alt="Project 1 Image">
+            <img src="images/oios7.jpg" alt="Project 1 Image">
+            <img src="images/oios8.jpg" alt="Project 1 Image">
+            <img src="images/oios9.jpg" alt="Project 1 Image">
+          </div>
+          <button class="carousel-btn prev" onclick="rotateCarousel(-1)">❮</button>
+          <button class="carousel-btn next" onclick="rotateCarousel(1)">❯</button>
         </div>
+      </div>
+      
       </div>
     </div>
 
@@ -106,11 +112,13 @@
       <p>
         This system streamlines student data management and real-time updates for teachers/admins. Built using Core Java, J2SE, Spring Boot, Oracle DB, and REST APIs, it improves data accuracy and scalability.
       </p>
-      <div class="slider">
-        <div class="slide-wrapper">
-          <img src="images/sms1.jpg" />
-          <img src="images/sms2.jpg" />
-        </div>
+      <div class="image-switcher">
+        <img src="images/sms1.jpg" alt="SMS Project Image" class="active">
+        <img src="images/sms2.jpg" alt="SMS Project Image">
+        <button class="carousel-btn prev" onclick="switchImage(-1, 'switcher')">❮</button>
+        <button class="carousel-btn next" onclick="switchImage(1, 'switcher')">❯</button>
+      </div>
+      
       </div>
     </div>
   </section>
@@ -186,5 +194,6 @@
       document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
   </script>
+  
 </body>
 </html>
